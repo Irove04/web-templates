@@ -1,0 +1,130 @@
+<!--
+AUTHOR: Irove04
+License: MIT
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✦ STARS ✦</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="starfield"></div>
+
+<div id="wrapper">
+    <aside id="sidebar">
+        <div class="window-title-bar">
+            <span class="window-title">★ me!</span>
+            <span class="window-controls">x</span>
+        </div>
+        <div class="window-content center">
+            <div class="profile-pic">
+                <img src="#" alt="me">
+            </div>
+            <p><b>MOOD:</b> starry </p>
+            <p><b>PERSONALITY:</b> INFJ-T</p>
+            <hr>
+            <div class="nav-links">
+                <div class="window-title-sub">links</div>
+                <a href="#">Index</a>
+                <a href="#">Galaxy</a>
+                <a href="#">Constelations</a>
+            </div>
+        </div>
+    </aside>
+
+    <main id="main-content">
+        <header id="site-header">✦ STATION ✦</header>
+
+        <section class="window-box">
+            <div class="window-title-bar">
+                <span class="window-title">spacey corner</span>
+                <span class="window-controls">x</span>
+            </div>
+            <div class="window-content center">
+                <h2 class="welcome-text">Welcome to my stelar station</h2>
+                <p>Don't look directly at the sun!</p>
+
+                <div class="flex-row">
+                    <div class="sub-box glitter-border">
+                        <div class="window-title-sub">LOGS</div>
+                        <div class="scroll-text">
+                            <p><b>15/04/2026</b> - Template created.</p>
+                            <p><b>10/04/2026</b> - Starting project.</p>
+                        </div>
+                    </div>
+                    <div class="sub-box glitter-border">
+                        <div class="window-title-sub">My favs now</div>
+                        <div class="image-box">[space]</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="window-box">
+            <div class="window-title-bar">
+                <span class="window-title">neocities links</span>
+                <span class="window-controls">x</span>
+            </div>
+            <div class="window-content center">
+                <div class="window-title-sub">neighbors / friends</div>
+                <div class="links-grid">
+                    <a href="#">[User_1]</a>
+                    <a href="#">[User_2]</a>
+                    <a href="#">[User_3]</a>
+                    <a href="#">[User_4]</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="window-box">
+            <div class="window-title-bar">
+                <span class="window-title">the blinker</span>
+                <span class="window-controls">x</span>
+            </div>
+            <div class="window-content center">
+                <div class="window-title-sub">badges / buttons</div>
+                <div class="badges">
+                    <div class="badge-btn hosted">NEOCITIES</div>
+                    <div class="badge-btn html">HTML</div>
+                    <div class="badge-btn css">CSS</div>
+                    <div class="badge-btn js">JS</div>
+                    <div class="badge-alt">STARS 100%</div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script>
+
+    // this is a little script for the background stars
+    // this creates the stars, gives them colors
+    // and then puts them randomly in the background
+    // the css then grabs them and makes them shine (like an on-off method)
+
+    window.onload = () => {
+        const starfield = document.getElementById('starfield');
+        // you can change the colors here:
+        const colors = ['#9d50bb', '#00d4ff', '#ffffff'];
+
+        // this is the logic of the stars
+        // you can change the number of stars at will, is set to 150 now
+        for (let i = 0; i < 150; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.top = `${Math.random() * 100}vh`;
+            star.style.animationDelay = `${Math.random() * 2}s`;
+            star.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            starfield.appendChild(star);
+        }
+    };
+
+</script>
+
+</body>
+</html>
